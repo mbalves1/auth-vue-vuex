@@ -12,7 +12,7 @@
           </li>
           <li class="nav-item">
             <router-link to="/gerentes" class="nav-link">
-              Gerentes
+              Gerente
             </router-link>
           </li>
         </ul>
