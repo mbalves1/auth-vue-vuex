@@ -29,13 +29,8 @@ export default {
   },
   methods: {
     login() {
-      this.$http.post('auth/login', this.user)
-        .then(response => {
-          console.log(response)
-          localStorage.setItem('token', response.data.access_token)
-          this.$router.push({ name: 'gerentes' })
-        })
-        .catch(erro => console.log(erro))
+      this.$store.dispatch('login', this.user)
+        .then(() => this.$router.push({ name:  'gerentes' }))
     }
   }
 };
